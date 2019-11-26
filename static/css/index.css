@@ -11,9 +11,8 @@ h1
 .navbar-brand
 {
     position: relative;
-    width: 150px;
-    left: 15px;
-    max-height: 70px; /* height of the navbar */
+    width: 350px;
+    padding: 5%;
 }
 @media screen and (min-width:768px){
     .navbar-brand-centered {
