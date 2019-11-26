@@ -31,6 +31,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'tinymce',
+    'pyuploadcare.dj',
     'bootstrap4',
     'homageapp.apps.HomageappConfig',
     'django.contrib.admin',
@@ -68,6 +70,11 @@ TEMPLATES = [
         },
     },
 ]
+
+UPLOADCARE = {
+    'pub_key': '94518bdc2cca03aa97c6',
+    'secret': 'ba1d254926843b0b0524',
+}
 
 WSGI_APPLICATION = 'homage.wsgi.application'
 
