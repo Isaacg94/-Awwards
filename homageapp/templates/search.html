@@ -4,11 +4,12 @@
 <div class="container">
     <div class="row pt-5 m-auto">
         {% if projects%}
-        <h2>Found {{ projects|length }} of searched term {{message}}</h2>
+        <h2>Found {{ projects|length }} of searched term "{{message}}"</h2>
         {% else %}
-        <h2> Found 0 Projects for the search term {{message}}</h2>
+        <h2> Found 0 Projects for the search term "{{message}}"</h2>
         {% endif %}
-
+    </div>
+    <dir class="row pt-5 m-auto">
         {% if projects%}
         <div class="col-md-6 col-lg-4 pb-3">
             {% for item in projects %}
@@ -17,8 +18,8 @@
                     <img src="{{item.img.cdn_url}}" alt="" class="img-fluid">
                 </div>
                 <!-- <div class="card-custom-img"
-                        style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
-                    </div> -->
+                            style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+                        </div> -->
                 <div class="card-custom-avatar">
                     <img class="img-fluid"
                         src="http://res.cloudinary.com/d3/image/upload/c_pad,g_center,h_200,q_auto:eco,w_200/bootstrap-logo_u3c8dx.jpg"
@@ -37,10 +38,11 @@
 
 
             </div>
-                {% endfor %}
-            {% endif %}
+            {% endfor %}
+
         </div>
-    </div>
+        {% endif %}
+    </dir>
 </div>
 
 {% endblock %}
