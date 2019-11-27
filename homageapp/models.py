@@ -18,3 +18,8 @@ class Project(models.Model):
     description = models.TextField()
     img = ImageField()
     live_site = models.CharField(max_length=256)
+
+    @classmethod
+    def get_projects(cls):
+        projects = cls.objects.all()
+        return projects
