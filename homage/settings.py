@@ -73,8 +73,8 @@ TEMPLATES = [
 ]
 
 UPLOADCARE = {
-    'pub_key': '94518bdc2cca03aa97c6',
-    'secret': 'ba1d254926843b0b0524',
+    'pub_key': '2b7902ff684c506ed65c',
+    'secret': 'cc95d620884a16f45fd6',
 }
 
 WSGI_APPLICATION = 'homage.wsgi.application'

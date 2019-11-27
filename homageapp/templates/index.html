@@ -5,9 +5,10 @@
 <div class="container">
     <div class="row pt-5 m-auto">
         <div class="col-md-6 col-lg-4 pb-3">
+            <!-- Looping through card   -->
+            {% for image in images %}
             <div class="card card-custom bg-white border-white border-0">
-                <div class="card-custom-img"
-                    style="background-image: url(http://res.cloudinary.com/d3/image/upload/c_scale,q_auto:good,w_1110/trianglify-v1-cs85g_cc5d2i.jpg);">
+                <div class="card-custom-img" style="background-image: url({{image.img.cdn_url}});">
                 </div>
                 <div class="card-custom-avatar">
                     <img class="img-fluid"
@@ -26,6 +27,11 @@
                     <a href="#" class="btn btn-outline-primary">Other option</a>
                 </div>
             </div>
+            {% empty %}
+            <div class="row">
+                <h2 class="text-center">There are No Images</h2>
+            </div>
+            {% endfor %}
         </div>
     </div>
 </div>
