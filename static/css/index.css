@@ -18,6 +18,11 @@ h1
     padding: 5%;
 }
 
+.srch-form{
+    position: relative;
+    padding: 12%;
+}
+
 form{
     position: relative;
     top: 50%;
