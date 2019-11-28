@@ -51,7 +51,7 @@ body {
     font-size: 36px;
     margin-left: 50px;
   }
-form{
+.navbar-form{
     transform: translateZ(10px) !important;
     position: relative;
     top: 50%;
@@ -97,16 +97,16 @@ input{
     transition: all 1s;
 }
 
-form:hover{
+.navbar-form:hover{
     width: 200px;
     cursor: pointer;
 }
 
-form:hover input{
+.navbar-form:hover input{
     display: block;
 }
 
-form:hover .fa{
+.navbar-form:hover .fa{
     background: #07051a;
     color: white;
 }
