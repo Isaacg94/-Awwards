@@ -1,10 +1,7 @@
 body {
     font-family: 'Alegreya Sans SC', sans-serif;
 }
-h1
-{
-  color: green;
-}
+
 
 .navbar-nav.navbar-center {
     position: absolute;
@@ -15,15 +12,47 @@ h1
 {
     position: relative;
     width: 350px;
-    padding: 5%;
 }
 
 .srch-form{
     position: relative;
-    padding: 12%;
-}
 
+}
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(17, 17, 17, 0.801);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
 form{
+    transform: translateZ(10px) !important;
     position: relative;
     top: 50%;
     left: 50%;
@@ -81,11 +110,29 @@ form:hover .fa{
     background: #07051a;
     color: white;
 }
+.landing{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:right;
+    background-position: bottom;
+    -webkit-background-size: cover;
+    /* height: 310px; */
+    height: 70%;
 
+}
+.cover.container-fluid{
+    background: linear-gradient(144deg, rgba(10,32,41,1) 0%, rgba(25,0,78,1) 100%);
+
+    height: inherit;
+}
+.carousel-item {
+    padding: 3%;
+}
 .card-custom {
     overflow: hidden;
     min-height: 450px;
     box-shadow: 0 0 15px rgba(10, 10, 10, 0.3);
+    border-radius: 6px;
   }
   
   .card-custom-img {
@@ -126,8 +173,12 @@ form:hover .fa{
     width: 100px;
     height: 100px;
   }
-  
 
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
 @media screen and (min-width:768px){
     .navbar-brand-centered {
         position: absolute;
