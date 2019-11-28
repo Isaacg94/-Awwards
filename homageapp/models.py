@@ -11,6 +11,17 @@ class Profile(models.Model):
     profile_pic = ImageField(manual_crop ='1080x1080')
     contact_info = models.CharField(max_length=144)
 
+    @classmethod
+    def get_by_id(cls, id):
+        profile = Profile.objects.get(user = id)
+        return profile
+
+
+    @classmethod
+    def filter_by_id(cls, id):
+        profile = Profile.objects.filter(user = id).first()
+        return 
+
 
 class Project(models.Model):
     profile = models.ForeignKey(User, related_name="projects", on_delete=models.CASCADE)
