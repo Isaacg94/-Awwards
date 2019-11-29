@@ -27,8 +27,8 @@ class Project(models.Model):
     profile = models.ForeignKey(User, related_name="projects", on_delete=models.CASCADE)
     title = models.CharField(max_length=144)
     description = models.TextField()
-    img = ImageField()
-    live_site = models.CharField(max_length=256)
+    img = ImageField(manual_crop = '1920x1080')
+    live_site = models.URLField(max_length=250)
 
     @classmethod
     def get_projects(cls):
@@ -38,4 +38,9 @@ class Project(models.Model):
     @classmethod
     def search_by_title(cls,search_term):
         projects = cls.objects.filter(title__icontains=search_term)
+        return projects
+
+    @classmethod
+    def get_profile_projects(cls, profile):
+        projects = Project.objects.filter(profile__pk = profile)
         return projects

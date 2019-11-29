@@ -3,6 +3,7 @@ from django.http  import HttpResponse,Http404
 from .models import Project,Profile
 from django.contrib.auth.decorators import login_required
 from .forms import NewProjectForm, ProfileForm
+from django.contrib.auth.models import User
 
 # Create your views here.
 @login_required(login_url='/accounts/login/')
