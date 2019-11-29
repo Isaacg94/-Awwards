@@ -114,6 +114,7 @@ input {
   color: white;
 }
 
+
 .landing {
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -235,5 +236,20 @@ input {
   .navbar>.container .navbar-brand-centered,
   .navbar>.container-fluid .navbar-brand-centered {
     margin-left: -80px;
+  }
+}
+
+@media only screen and (max-width: 766px) {
+  .navbar-center {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  .navbar-form {
+    display: none;
+  }
+  .card-custom-avatar {
+    display: none;
   }
 }
