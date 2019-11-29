@@ -172,6 +172,14 @@ input{
     left: 1.25rem;
     width: 100px;
     height: 100px;
+    -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  }
+
+  .card-custom-avatar:hover img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
   }
 
   .card-custom-avatar-profile img {
@@ -180,6 +188,14 @@ input{
     width: 100px;
     height: 100px;
     margin: 10px;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+  }
+
+  .card-custom-avatar-profile:hover img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
   }
 
 
