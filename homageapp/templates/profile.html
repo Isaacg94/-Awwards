@@ -31,6 +31,13 @@
                     <a href="{% url 'edit_profile' %}" class="btn btn-sm btn-outline-dark"><strong>Edit
                             Profile</strong></a>
                 </li>
+                <li>
+                    <span>
+                            {% autoescape on %}
+                        <h5><strong>{{profile_details.bio| safe}}</strong></h5>
+                        {% endautoescape %}
+                    </span>
+                </li>
                 {%endif%}
 
             </ul>

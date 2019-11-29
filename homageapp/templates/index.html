@@ -13,8 +13,8 @@
                             <div class="row item">
                                 <div class="col-md-10 title"
                                     style="text-align: right; padding-right: 5%; line-height: 22px;">
-                                    <!-- <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">For UI/UX peeps</p>
-                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">& inspiring leaders of the web.</p> -->
+                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">For UI/UX peeps</p>
+                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">& inspiring leaders of the web.</p>
                                 </div>
                                 <div class="col-md-2" style="text-align: right; border-left: solid white 1px;"">
                                     <svg xmlns=" http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80"
@@ -54,19 +54,19 @@
                                     </svg>
                                 </div>
                                 <div class="col-md-10" style="text-align: left; padding-left: 5%; line-height: 22px;">
-                                    <!-- <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">Award platform that showcases  </p>
-                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">& pays Homage to dope developers.</p> -->
+                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">Award platform that showcases  </p>
+                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">& pays Homage to dope developers.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="carousel-item">
                             <div class="row item">
                                 <div class="col-md-10" style="text-align: right; padding-right: 5%; line-height: 22px;">
-                                    <!-- <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">Be
+                                    <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">Be
                                         Inspired. Be Inspiring.</p>
                                     <p style="font-family: 'Kalam', cursive; font-size: 30px; color: white;">
                                         Pushing the boundaries of UI, UX and innovative development.
-                                    </p> -->
+                                    </p>
                                 </div>
                                 <div class="col-md-2" style="text-align: right; border-left: solid white 1px;">
                                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="80"
@@ -107,8 +107,10 @@
                 </div> -->
                 {% if item.profile.profile.profile_pic %}
                 <div class="card-custom-avatar">
-
-                    <img class="img-fluid" src="{{item.profile.profile.profile_pic.cdn_url}}" alt="Avatar" style="border: solid #eaf1efdc 3.5px;">
+                    <a href="{%url 'profile' item.profile.username%}">
+                        <img class="img-fluid" src="{{item.profile.profile.profile_pic.cdn_url}}" alt="Avatar" style="border: solid #eaf1efdc 3.5px;">
+                    </a>
+                    
                 </div>
                 {% else %}
                 <div class="card-custom-avatar">
